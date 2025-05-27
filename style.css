@@ -143,6 +143,37 @@ body::before {
     filter: drop-shadow(0 0 6px #f5c2e7);
 }
 
+.header {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-left: auto;
+    justify-content: flex-end;
+    align-items: flex-start;
+    max-width: 300px;
+}
+
+.buttons img {
+    width: 88px;
+    height: 31px;
+    image-rendering: pixelated;
+    border: 1px solid #313244;
+    border-radius: 4px;
+    background-color: #1e1e2e;
+    transition: transform 0.2s ease;
+}
+
+.buttons img:hover {
+    transform: scale(1.05);
+}
+
 .line {
     display: flex;
     align-items: flex-start;
