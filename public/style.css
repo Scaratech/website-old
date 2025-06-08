@@ -70,13 +70,19 @@ body::before {
     opacity: 0.25;
 }
 
+a {
+    color: var(--accent);
+}
+
 .terminal {
     background: #181825;
     padding: 2rem;
     border-radius: 12px;
     max-width: 1200px;
     width: 100%;
-    box-shadow: 0 0 20px rgba(245, 194, 231, 0.15);
+    box-shadow:
+        0 0 20px 5px rgba(245, 194, 231, 0.4),
+        0 0 40px 15px rgba(245, 194, 231, 0.15);
     animation: fadeIn 1s ease-out;
 }
 
@@ -119,7 +125,8 @@ body::before {
     margin-left: 0.5rem;
 }
 
-.status {
+.status,
+.vistor {
     margin: 0.4rem 0 0.8rem;
     font-style: italic;
     color: #a6adc8;
@@ -157,7 +164,7 @@ body::before {
     margin-left: auto;
     justify-content: flex-end;
     align-items: flex-start;
-    max-width: 300px;
+    max-width: 400px;
 }
 
 .buttons img {
@@ -202,4 +209,52 @@ body::before {
     word-break: break-word;
     min-width: 0;
     position: relative;
+}
+
+.music-widget {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background: #181825;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow:
+        0 0 15px 3px rgba(245, 194, 231, 0.3),
+        0 0 30px 8px rgba(245, 194, 231, 0.15);
+    margin-top: 1.5rem;
+    color: var(--fg);
+    font-family: 'Fira Code', monospace;
+    max-width: 500px;
+    animation: fadeIn 1s ease;
+}
+
+.music-widget img {
+    width: 64px;
+    height: 64px;
+    border-radius: 4px;
+    border: 1px solid #313244;
+}
+
+.music-widget .info {
+    display: flex;
+    flex-direction: column;
+}
+
+.music-widget .track {
+    font-style: italic;
+    font-size: 0.9rem;
+    color: #a6adc8;
+    margin: 0;
+}
+
+.music-widget .title {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: var(--accent);
+    margin: 0.1rem 0;
+}
+
+.music-widget .artist {
+    font-size: 1rem;
+    margin: 0;
 }
